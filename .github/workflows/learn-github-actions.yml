@@ -5,13 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install Power Apps CLI
-        run: curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
-      - name: Test Power Apps CLI
-        run: pac
-  testbuild2:
-    needs: testbuild
-    runs-on: ubuntu-latest
-    steps:
-      - name: Install Power Apps CLI
         shell: pwsh
         run: Install-Package Microsoft.PowerApps.CLI
