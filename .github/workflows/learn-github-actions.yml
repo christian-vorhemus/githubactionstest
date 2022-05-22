@@ -4,11 +4,14 @@ jobs:
   testbuild:
     runs-on: ubuntu-latest
     steps:
-      - name: Install Angular CLI
-        run: npm install -g @angular/cli
+      - name: Install Power Apps CLI
+        run: curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+      - name: Test Power Apps CLI
+        run: pac
   testbuild2:
     needs: testbuild
     runs-on: ubuntu-latest
     steps:
-      - name: Test Angular CLI
-        run: ng help
+      - name: Install Power Apps CLI
+        shell: pwsh
+        run: Install-Package Microsoft.PowerApps.CLI
