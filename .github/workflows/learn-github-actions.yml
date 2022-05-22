@@ -6,5 +6,8 @@ jobs:
     steps:
       - name: Install Angular CLI
         run: npm install -g @angular/cli
+  testbuild2:
+    runs-on: ubuntu-latest
+    steps:
       - name: Test Angular CLI
         run: ng help
