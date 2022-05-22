@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: Install Power Apps CLI
         shell: pwsh
-        run: Invoke-WebRequest -Uri https://aka.ms/PowerAppsCLI -OutFile .\powerapps.msi; Start-Process "msiexec" "/i .\powerapps.msi /qn /l*! .\log.txt" -NoNewWindow -PassThru
+        run: Invoke-WebRequest -Uri https://aka.ms/PowerAppsCLI -OutFile .\powerapps.msi; Start-Process "msiexec" "/i powerapps.msi /qn /l*! .\log.txt" -NoNewWindow -PassThru; Start-Sleep -Seconds 60
       - name: Test Power Apps CLI
         shell: pwsh
         run: pac
