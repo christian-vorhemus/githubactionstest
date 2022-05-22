@@ -7,3 +7,6 @@ jobs:
       - name: Install Power Apps CLI
         shell: pwsh
         run: Invoke-WebRequest -Uri https://aka.ms/PowerAppsCLI -OutFile powerapps.msi; .\powerapps.msi
+      - name: Test Power Apps CLI
+        shell: pwsh
+        run: pac
