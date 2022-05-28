@@ -1,4 +1,4 @@
-name: learn-github-actions
+name: pp-github-action
 on: [push]
 jobs:
   testbuild:
