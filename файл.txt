@@ -1,1 +1,0 @@
-File present to test pre-commit scripts for non-ascii file names
